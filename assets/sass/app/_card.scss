@@ -1,0 +1,80 @@
+$bg-color: #fefefe;
+$wrap-bg: #f7c8ee;
+
+section {
+  @include linear-gradient(to top, red, orange);
+}
+h2 {
+  text-align: center;
+}
+
+.border-dash {
+  padding: 0;
+  text-align:center;
+  margin:10px auto;
+  margin-top:14px;
+  width:100%;
+  border: 1px dashed #888;
+}
+.bigNumberDisplay {
+  font-size: 4em;
+  text-align: center;
+}
+.numbersTable {
+  width:660px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom:50px;
+  font-size: 1.6em;
+  padding:20px;
+  text-align: center;
+  background:$wrap-bg;
+}
+.bingo {
+  width: 600px;
+  margin-top: 30px;
+  opacity: 0.5;
+  margin: 0 auto;
+  div {
+    display: inline-table;
+    > div {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      padding-top: 4px;
+      margin-top: 5px;
+      background-color: $bg-color;
+    }
+    div.leftover {
+      display: flex;
+      height: 130px;
+      width: 80px;
+      border: 2px solid #000;
+      color: #fff;
+      border-radius: 10px;
+      justify-content: center;
+      font-size: 1.3em;
+      line-height: 1em;
+      padding: 17px;
+      -moz-box-shadow: inset 0 0 10px #3a6636, inset 0 1px #83d391, 0 1px 1px #234228;
+      -webkit-box-shadow: inset 0 0 10px #3a6636, inset 0 1px #83d391, 0 1px 1px #234228;
+      box-shadow: inset 0 0 10px #2b542c, inset 0 1px #83d391, 0 1px 1px #111;
+      @include linear-gradient(to top, green, lightgreen);
+    }
+  }
+}
+.togo {
+  position: relative;
+  float: right;
+}
+#newgame {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media(min-width: 768px){
+  .border-dash {
+    width:600px;
+  }
+}

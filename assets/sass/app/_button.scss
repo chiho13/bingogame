@@ -1,0 +1,21 @@
+.btn-play {
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 11px;
+  font-family: Arial;
+  margin: 0 auto;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  &:hover {
+    background: #2289c9;
+    text-decoration: none;
+  }
+  .active {
+    color:#fefefe;
+    background: #2289c9;
+  }
+}
