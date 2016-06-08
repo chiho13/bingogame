@@ -19,7 +19,8 @@ $dropDown       : true;
       > a {
         color: $colDefault;
         &:hover,  &:focus {
-          color: $bgDefault; }}
+          color: $bgHighlight; }
+        }
       @if $dropDown {
         > .dropdown-menu {
           background-color: $bgDefault;
@@ -37,9 +38,13 @@ $dropDown       : true;
           color: $colHighlight;
           background-color: $bgHighlight; }}}
     > .active {
-      > a, > a:hover, > a:focus {
+      > a {
         color: $bgDefault;
-        background-color: $bgHighlight; }}
+        background-color: $bgHighlight; }
+      > a:hover, > a:focus {
+        color: $bg-whitish;
+        background-color: darken($bgHighlight, 5%);
+      }}
     > .open {
       > a, > a:hover, > a:focus {
         color: $colHighlight;
