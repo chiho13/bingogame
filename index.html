@@ -1,390 +1,405 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="icon" href="favicon.ico" sizes="16x16" type="image/ico">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="icon" href="favicon.ico" sizes="16x16" type="image/ico">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.ie.min.css" />
+<![endif]-->
+</head>
+
+<body>
+  <!--[if lt IE 8]>
             <p class="bwrapper rowserupgrade">You are using an <strong>outdated</strong> bwrapper rowser. Please <a href="http://bwrapper rowsehappy.com/">upgrade your bwrapper rowser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <!-- navbar -->
-        <nav class="navbar navbar-default">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Tombola Bingo</a>
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Play <span class="sr-only">(current)</span></a></li>
-                <li><a href="about.html">About</a></li>
-              </ul>
+  <!-- Fork Ribbon -->
+  <span id="forkongithub"><a href="https://github.com/chiho13/bingogame">Fork me on GitHub</a></span>
 
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
+  <!-- Add your site or application content here -->
+  <!-- navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Tombola Bingo</a>
+      </div>
 
-        <div class="container bingo-container">
-            <h2 class="hidden-xs">Bingo</h2>
-            <div class="bigNumberDisplay">
-                  <span class="col-xs-6">0</span>
-                <div class="row tablet-inline col-xs-6">
-                  <div align="center" id="bingoTime" class="btn btn-play">Roll</div>
-                 </div>
-             </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Play <span class="sr-only">(current)</span></a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
 
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <div class="container bingo-container">
+    <h2 class="hidden-xs">Bingo</h2>
+    <div class="bigNumberDisplay">
+      <span class="col-xs-6">0</span>
+      <div class="row tablet-inline col-xs-6">
+        <div align="center" id="bingoTime" class="btn btn-play">Roll</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container bingo-container">
+    <div class="numbersTable">
+      <div class="wrapper row">
+        <div class="bingo bingo-1">
+          <div class="col col-1">
+            <div class="unit-10">&nbsp;</div>
+            <div class="unit-10">&nbsp;</div>
+            <div class="unit-10">&nbsp;</div>
+          </div>
+          <div class="col col-2">
+            <div class="unit-20">&nbsp;</div>
+            <div class="unit-20">&nbsp;</div>
+            <div class="unit-20">&nbsp;</div>
+          </div>
+          <div class="col col-3">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-4">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-5">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-6">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-7">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-8">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-9">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="togo togo-1">
+            <div class="leftover"> 15 to go</div>
+          </div>
         </div>
-
-        <div class="container bingo-container">
-            <div class="numbersTable">
-              <div class="wrapper row">
-                <div class="bingo bingo-1">
-                    <div class="col col-1">
-                      <div class="unit-10">&nbsp;</div>
-                      <div class="unit-10">&nbsp;</div>
-                      <div class="unit-10">&nbsp;</div>
-                    </div>
-                    <div class="col col-2">
-                      <div class="unit-20">&nbsp;</div>
-                      <div class="unit-20">&nbsp;</div>
-                      <div class="unit-20">&nbsp;</div>
-                    </div>
-                    <div class="col col-3">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-4">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-5">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-6">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-7">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-8">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-9">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="togo togo-1">
-                      <div class="leftover"> 15 to go</div>
-                    </div>
-                </div>
-                <hr class="border-dash" />
-              </div>
-              <div class="wrapper row">
-                <div class="bingo bingo-2">
-                    <div class="col col-1">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-2">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-3">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-4">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-5">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-6">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-7">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-8">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-9">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="togo togo-2">
-                      <div class="leftover"> 15 to go</div>
-                    </div>
-                </div>
-                <hr class="border-dash" />
-              </div>
-              <div class="wrapper row">
-                <div class="bingo bingo-3">
-                    <div class="col col-1">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-2">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-3">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-4">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-5">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-6">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-7">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-8">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-9">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="togo togo-3">
-                      <div class="leftover"> 15 to go</div>
-                    </div>
-                </div>
-                <hr class="border-dash" />
-              </div>
-              <div class="wrapper row">
-                <div class="bingo bingo-4">
-                    <div class="col col-1">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-2">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-3">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-4">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-5">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-6">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-7">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-8">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-9">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="togo togo-4">
-                      <div class="leftover"> 15 to go</div>
-                    </div>
-                </div>
-                <hr class="border-dash" />
-              </div>
-              <div class="wrapper row">
-                <div class="bingo bingo-5">
-                    <div class="col col-1">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-2">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-3">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-4">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-5">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-6">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-7">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-8">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-9">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="togo togo-5">
-                      <div class="leftover"> 15 to go</div>
-                    </div>
-                </div>
-                <hr class="border-dash" />
-              </div>
-              <div class="wrapper row">
-                <div class="bingo bingo-6">
-                    <div class="col col-1">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-2">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-3">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-4">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-5">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-6">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-7">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-8">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="col col-9">
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                      <div>&nbsp;</div>
-                    </div>
-                    <div class="togo togo-6">
-                      <div class="leftover"> 15 to go</div>
-                    </div>
-                </div>
-              </div>
-
-
-            </div>
+        <hr class="border-dash" />
+      </div>
+      <div class="wrapper row">
+        <div class="bingo bingo-2">
+          <div class="col col-1">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-2">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-3">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-4">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-5">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-6">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-7">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-8">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-9">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="togo togo-2">
+            <div class="leftover"> 15 to go</div>
+          </div>
         </div>
+        <hr class="border-dash" />
+      </div>
+      <div class="wrapper row">
+        <div class="bingo bingo-3">
+          <div class="col col-1">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-2">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-3">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-4">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-5">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-6">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-7">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-8">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-9">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="togo togo-3">
+            <div class="leftover"> 15 to go</div>
+          </div>
+        </div>
+        <hr class="border-dash" />
+      </div>
+      <div class="wrapper row">
+        <div class="bingo bingo-4">
+          <div class="col col-1">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-2">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-3">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-4">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-5">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-6">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-7">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-8">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-9">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="togo togo-4">
+            <div class="leftover"> 15 to go</div>
+          </div>
+        </div>
+        <hr class="border-dash" />
+      </div>
+      <div class="wrapper row">
+        <div class="bingo bingo-5">
+          <div class="col col-1">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-2">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-3">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-4">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-5">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-6">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-7">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-8">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-9">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="togo togo-5">
+            <div class="leftover"> 15 to go</div>
+          </div>
+        </div>
+        <hr class="border-dash" />
+      </div>
+      <div class="wrapper row">
+        <div class="bingo bingo-6">
+          <div class="col col-1">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-2">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-3">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-4">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-5">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-6">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-7">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-8">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="col col-9">
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+          </div>
+          <div class="togo togo-6">
+            <div class="leftover"> 15 to go</div>
+          </div>
+        </div>
+      </div>
 
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        <script src="js/main.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-    </body>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
+  </script>
+  <script src="js/main.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</body>
+
 </html>

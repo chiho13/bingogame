@@ -9,7 +9,7 @@ $dropDown       : true;
   border-left: none;
   border-right:none;
   .navbar-brand {
-    color: $colDefault;
+    color: $colHighlight;
     &:hover, &:focus {
       color: $colHighlight; }}
   .navbar-text {
@@ -19,7 +19,7 @@ $dropDown       : true;
       > a {
         color: $colDefault;
         &:hover,  &:focus {
-          color: $colHighlight; }}
+          color: $bgDefault; }}
       @if $dropDown {
         > .dropdown-menu {
           background-color: $bgDefault;
@@ -38,7 +38,7 @@ $dropDown       : true;
           background-color: $bgHighlight; }}}
     > .active {
       > a, > a:hover, > a:focus {
-        color: $colHighlight;
+        color: $bgDefault;
         background-color: $bgHighlight; }}
     > .open {
       > a, > a:hover, > a:focus {
@@ -68,3 +68,67 @@ $dropDown       : true;
         color: $colHighlight;
         background-color: $bgHighlight; }}}
 }
+
+
+//github fork
+
+#forkongithub a {
+    background: #00bcad;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 40px;
+    font-size: 1rem;
+    line-height: 2rem;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  #forkongithub a:hover {
+    background: #22cdbe;
+    color: #fff;
+  }
+
+  #forkongithub a::before,
+  #forkongithub a::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 1px;
+    background: #fff;
+  }
+
+  #forkongithub a::after {
+    bottom: 1px;
+    top: auto;
+  }
+
+  @media screen and (min-width:768px) {
+    #forkongithub {
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 200px;
+      overflow: hidden;
+      height: 200px;
+      z-index: 9999;
+    }
+    #forkongithub a {
+      width: 400px;
+      position: absolute;
+      top: 51px;
+      right: -130px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  }

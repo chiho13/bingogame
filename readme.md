@@ -2,7 +2,7 @@
 
 Open index.html to start
 
-To Edit file Sass files, Install Node Modules
+To Edit Sass files, Install Node Modules
 ```
 >npm install 
 ```
