@@ -10206,7 +10206,8 @@ button.close {
   text-decoration: none;
 }
 
-.btn-play:hover {
+.btn-play:hover, .btn-playfocus {
+  color: #fefefe;
   background: #2289c9;
   text-decoration: none;
 }
@@ -10214,6 +10215,13 @@ button.close {
 .btn-play .active {
   color: #fefefe;
   background: #2289c9;
+}
+
+.selected {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: lightgreen !important;
 }
 
 .reasons li {

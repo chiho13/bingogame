@@ -20,6 +20,7 @@ $(document).ready(function() {
       outer = []
     }
 
+
   $(".bingo").animate({opacity: 1});
 
     //first ticket
@@ -77,7 +78,8 @@ $(document).ready(function() {
     pool.push(m);
   }
   console.log(pool);
-  //var pool = [1, 2, 3, 4, 5, 6, 7, 10. 13, ];
+
+//this generate unique number from 1 to 90. no same number is returned
   function getNumber() {
     if (pool.length == 0) {
         alert("No numbers left");
@@ -88,11 +90,33 @@ $(document).ready(function() {
     console.log(used);
     $(".bigNumberDisplay span").text(drawn[0]);
   }
+
   $("#bingoTime").on("click", getNumber);
 
   //numbers left
   //select numbers
+  $(".bingo-1 .col div").click(function(){
+    if ($(this).text().length > 0) {
+    $(this).toggleClass("selected");
+    }
 
-  
+    var count = 0;
+
+    console.log(count);
+    var selected = $(".selected").length;
+    var numberUntilWin = 15 - selected;
+    $(".togo .leftover").html(numberUntilWin + " to go");
+    console.log(selected);
+
+  });
+
+  //this is as far as i can go with my javascript.
+  //the To Go only works for the firstTicket
+  //I wanted to count down the numbers of remaining number for the ticket with
+  //the most stamped number
+
+
+
+
 
 });
