@@ -191,6 +191,7 @@ h2 {
   justify-content: center;
   padding-top: 4px;
   margin-top: 5px;
+  transition: all .3s ease;
   background-color: #fefefe;
 }
 
