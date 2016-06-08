@@ -1,19 +1,30 @@
-$bg-color: #fefefe;
-$wrap-bg: #f7c8ee;
+@import '_variables';
 
+//breakpoint mixin
+$mobile-width: 420px;
+$tablet-width: 768px;
+@mixin tablet {
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
 section {
   @include linear-gradient(to top, red, orange);
 }
 h2 {
   text-align: center;
 }
-
 .border-dash {
   padding: 0;
-  text-align:center;
-  margin:10px auto;
-  margin-top:14px;
-  width:100%;
+  text-align: center;
+  margin: 10px auto;
+  margin-top: 14px;
+  width: 100%;
   border: 1px dashed #888;
 }
 .bigNumberDisplay {
@@ -21,14 +32,14 @@ h2 {
   text-align: center;
 }
 .numbersTable {
-  width:660px;
+  width: 660px;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom:50px;
+  margin-bottom: 50px;
   font-size: 1.6em;
-  padding:20px;
+  padding: 20px;
   text-align: center;
-  background:$wrap-bg;
+  background: $wrap-bg;
 }
 .bingo {
   width: 600px;
@@ -38,29 +49,30 @@ h2 {
   div {
     display: inline-table;
     > div {
+      cursor: pointer;
       display: flex;
       width: 40px;
       height: 40px;
       justify-content: center;
       padding-top: 4px;
       margin-top: 5px;
-      background-color: $bg-color;
+      background-color: $bg-whitish;
+        &:hover {
+          background-color: darken($bg-whitish, 5%);
+        }
     }
     div.leftover {
       display: flex;
       height: 130px;
       width: 80px;
-      border: 2px solid #000;
+    //  border: 2px solid #000;
       color: #fff;
-      border-radius: 10px;
+      border-radius: 0px;
       justify-content: center;
       font-size: 1.3em;
       line-height: 1em;
       padding: 17px;
-      -moz-box-shadow: inset 0 0 10px #3a6636, inset 0 1px #83d391, 0 1px 1px #234228;
-      -webkit-box-shadow: inset 0 0 10px #3a6636, inset 0 1px #83d391, 0 1px 1px #234228;
-      box-shadow: inset 0 0 10px #2b542c, inset 0 1px #83d391, 0 1px 1px #111;
-      @include linear-gradient(to top, green, lightgreen);
+      background-color: $bgHighlight;
     }
   }
 }
@@ -72,9 +84,81 @@ h2 {
   margin: 0 auto;
   text-align: center;
 }
-
-@media(min-width: 768px){
+@media(min-width: 768px) {
   .border-dash {
-    width:600px;
+    width: 600px;
+  }
+}
+@include tablet {
+  .numbersTable {
+    margin-top: 10px;
+    max-width: 430px;
+    width:100%;
+    font-size: 1.2em;
+    .bingo {
+      max-width: 406px;
+      width:100%;
+      margin-left: 0;
+      div >div {
+        width: 29px;
+        height: 29px;
+      }
+      div.leftover {
+        height: 97px;
+        width: 61px;
+        padding: 8px;
+        font-size: 1.5em;
+      }
+    }
+  }
+  .tablet-inline {
+    margin-top: -15px;
+  }
+  .bigNumberDisplay {
+    background-color: #eee;
+    max-width: 430px;
+    width:100%;
+    height: 93px;
+    padding-top: 15px;
+    margin: 0 auto;
+    span {
+      margin-top: -9px;
+    }
+  }
+}
+@include mobile {
+  .bingo-container {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .numbersTable {
+    font-size: 0.9em;
+    width: 95%;
+    padding-top: 10px;
+    .bingo {
+      width: 100%;
+      text-align: left;
+      padding-left: 10px;
+      div >div {
+        width: 20px;
+        height: 20px;
+        padding-top: 2px;
+      }
+      div.leftover {
+        position: relative;
+        height: 69px;
+        width: 44px;
+        text-align:center;
+        border-width: 1px;
+        padding: 4px;
+        font-size: 1.5em;
+      }
+    }
+  }
+  .bigNumberDisplay {
+    width: 95%;
+  }
+  .togo {
+    margin-right: 9px;
   }
 }

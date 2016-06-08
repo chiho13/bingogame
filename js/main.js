@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+  //To play bingo
+
   var ticketString = "011722475204365360702637497481233455758302154058881928446789061241507324334876840738576186051132437816395663800818206590104559628214294664710935667287132130687703253151692742547985";
   var firstticket = ticketString.slice(0, 30);
   var secondticket = ticketString.slice(30, 60);
@@ -16,14 +19,16 @@ $(document).ready(function() {
   var row5 = $(".bingo-5 .col");
   var row6 = $(".bingo-6 .col");
   var clear = function() {
-      output = [];
-      outer = []
-    }
+    output = [];
+    outer = []
+  }
 
 
-  $(".bingo").animate({opacity: 1});
+  $(".bingo").animate({
+    opacity: 1
+  });
 
-    //first ticket
+  //first ticket
   mapTicket(firstticket, output, outer, row1);
   clear();
   //second ticket
@@ -79,10 +84,10 @@ $(document).ready(function() {
   }
   console.log(pool);
 
-//this generate unique number from 1 to 90. no same number is returned
+  //this generate unique number from 1 to 90. no same number is returned
   function getNumber() {
     if (pool.length == 0) {
-        alert("No numbers left");
+      alert("No numbers left");
     }
     var index = Math.floor(pool.length * Math.random());
     var drawn = pool.splice(index, 1);
@@ -95,25 +100,30 @@ $(document).ready(function() {
 
   //numbers left
   //select numbers
-  $(".bingo-1 .col div").click(function(){
+  $(".bingo .col div").click(function() {
     if ($(this).text().length > 0) {
-    $(this).toggleClass("selected");
+      $(this).toggleClass("selected");
     }
 
-    var count = 0;
+    var selectedOne = $(".bingo-1 .col div.selected").length;
+    var selectedTwo = $(".bingo-2 .col div.selected").length;
+    var selectedThree = $(".bingo-3 .col div.selected").length;
+    var selectedFour = $(".bingo-4 .col div.selected").length;
+    var selectedFive = $(".bingo-5 .col div.selected").length;
+    var selectedSix = $(".bingo-6 .col div.selected").length;
 
-    console.log(count);
-    var selected = $(".selected").length;
-    var numberUntilWin = 15 - selected;
-    $(".togo .leftover").html(numberUntilWin + " to go");
-    console.log(selected);
+    //var numberUntilWinOne = 15 - selectedOne;
+    $(".togo-1 .leftover").html(15 - selectedOne + " to go");
+    $(".togo-2 .leftover").html(15 - selectedTwo + " to go");
+    $(".togo-3 .leftover").html(15 - selectedThree + " to go");
+    $(".togo-4 .leftover").html(15 - selectedFour + " to go");
+    $(".togo-5 .leftover").html(15 - selectedFive + " to go");
+    $(".togo-6 .leftover").html(15 - selectedSix + " to go");
+
+    //console.log(selected);
 
   });
 
-  //this is as far as i can go with my javascript.
-  //the To Go only works for the firstTicket
-  //I wanted to count down the numbers of remaining number for the ticket with
-  //the most stamped number
 
 
 

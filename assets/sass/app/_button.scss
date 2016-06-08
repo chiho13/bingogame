@@ -1,23 +1,26 @@
+@import '_variables';
+
 .btn-play {
   -webkit-border-radius: 11;
   -moz-border-radius: 11;
   border-radius: 11px;
   font-family: Arial;
   margin: 0 auto;
-  color: #ffffff;
+  color: $bgDefault;
+  border-radius:0;
   text-align: center;
   font-size: 18px;
-  background: #3498db;
+  background-color: $bgHighlight;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   &:hover, &focus {
       color: #fefefe;
-    background: #2289c9;
+    background-color: darken($bgHighlight, 5%);
     text-decoration: none;
   }
   .active {
     color:#fefefe;
-    background: #2289c9;
+    background: $wrap-bg;
   }
 }
 
@@ -27,5 +30,6 @@
   width: 35px;
   height: 35px;
   border-radius:50%;
-  background-color:lightgreen !important;
+  background-color: $stamp !important;
+  transition: all .3s ease;
 }

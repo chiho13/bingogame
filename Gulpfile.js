@@ -31,13 +31,6 @@ var onError = function( err ) {
 var paths = {
     /* Source paths */
     styles: ['assets/sass/main.scss'],
-    scripts: [
-        'assets/bower_components/bootstrap/dist/js/bootstrap.js'
-    ],
-    fonts: [
-        'assets/bower_components/bootstrap/fonts/*',
-        'assets/bower_components/font-awesome/fonts/*'
-    ],
 
     /* Output paths */
     stylesOutput: 'styles',
@@ -85,22 +78,22 @@ gulp.task('minify-css', function() {
     .pipe(gulp.dest('prod'));
 });
 
-gulp.task('scripts', function() {
-    return gulp.src(paths.scripts)
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest(paths.scriptsOutput))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest(paths.scriptsOutput))
-        .pipe(notify({ message: 'Scripts task complete' }));
-});
+// gulp.task('scripts', function() {
+//     return gulp.src(paths.scripts)
+//         .pipe(concat('main.js'))
+//         .pipe(gulp.dest(paths.scriptsOutput))
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe(uglify())
+//         .pipe(gulp.dest(paths.scriptsOutput))
+//         .pipe(notify({ message: 'Scripts task complete' }));
+// });
 
 
-gulp.task('fonts', function() {
-    return gulp.src(paths.fonts)
-    .pipe(gulp.dest(paths.fontsOutput))
-    .pipe(notify({ message: 'Fonts task complete', onLast: true }));
-});
+// gulp.task('fonts', function() {
+//     return gulp.src(paths.fonts)
+//     .pipe(gulp.dest(paths.fontsOutput))
+//     .pipe(notify({ message: 'Fonts task complete', onLast: true }));
+// });
 
 gulp.task('watch', function() {
   return gulp
@@ -121,5 +114,5 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('default', function() {
-    gulp.start('styles', 'minify-css', 'scripts', 'fonts', 'watch');
+    gulp.start('styles', 'minify-css', 'watch');
 });
